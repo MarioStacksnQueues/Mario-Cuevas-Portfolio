@@ -5,22 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Schedule Appointment — Mario Cuevas</title>
 
-  <!-- Google Font -->
+  <!-- I load my preferred font here -->
   <link
     href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap"
     rel="stylesheet"
   />
 
-  <!-- AOS for scroll animations -->
+  <!-- AOS for animating elements as they scroll into view -->
   <link
     rel="stylesheet"
     href="https://unpkg.com/aos@2.3.4/dist/aos.css"
   />
 
-  <!-- Your CSS -->
+  <!-- Main CSS: controls layout and form styles -->
   <link rel="stylesheet" href="style.css"/>
 
-  <!-- Font Awesome for icons -->
   <script
     src="https://kit.fontawesome.com/your-kit.js"
     crossorigin="anonymous"
@@ -28,16 +27,16 @@
 </head>
 <body>
   <div class="layout">
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
+  <!-- Sidebar is shared across pages; contains nav and resume link -->
+  <aside class="sidebar">
       <img src="mario-avatar.jpg" alt="Mario Cuevas" class="avatar"/>
       <h1 class="name">
         Mario Cuevas<span class="dot">.</span>
       </h1>
       <p class="role">Computer Science Student & AI Engineer</p>
 
-      <!-- Primary site navigation -->
-      <nav class="site-nav">
+  <!-- Navigation links to other pages and site sections -->
+  <nav class="site-nav">
         <a href="index.html"><i class="fas fa-home"></i><span>Home</span></a>
         <a href="about.html"><i class="fas fa-user"></i><span>About Me</span></a>
         <a href="services.html"><i class="fas fa-cogs"></i><span>My Services</span></a>
@@ -45,14 +44,13 @@
         <a href="appointment.html" class="active"><i class="fas fa-calendar-alt"></i><span>Calendar</span></a>
       </nav>
 
-      <!-- Social links -->
       <div class="social">
         <a href="#"><i class="fab fa-twitter"></i></a>
         <a href="#"><i class="fab fa-github"></i></a>
         <a href="#"><i class="fab fa-linkedin"></i></a>
       </div>
 
-      <!-- Download resume -->
+      <!-- Quick resume download for visitors -->
       <a href="Resume_Mario_Cuevas.pdf" class="btn hire" download>
         DOWNLOAD RESUME
       </a>
@@ -60,8 +58,9 @@
       <p class="copyright">© 2025 Mario Cuevas</p>
     </aside>
 
-    <!-- MAIN CONTENT -->
+    <!-- Main: page-specific content below -->
     <main class="main">
+      <!-- Appointment form: collects date, time, and email for booking -->
       <section>
         <h3>Schedule an Appointment</h3>
         <form class="appointment-form">
@@ -83,10 +82,9 @@
           After booking, you’ll receive a confirmation email with a calendar invitation.
         </p>
       </section>
-    </main>        <!-- closes .main -->
-  </div>          <!-- closes .layout -->
+    </main>
+  </div>
 
-  <!-- Shared scripts -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.8/countUp.min.js"></script>
   <script src="script.js"></script>

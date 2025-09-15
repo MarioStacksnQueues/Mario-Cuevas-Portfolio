@@ -22,12 +22,12 @@ body {
 }
 
 .layout {
+  /* I set theme variables here so colors are easy to change */
   display: grid;
   grid-template-columns: 300px 1fr;
   height: 100%;
 }
 
-/* Sidebar */
 .sidebar {
   background: var(--surface);
   padding: 2rem 1.5rem;
@@ -35,6 +35,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  /* Sidebar: This section styles the sidebar of the layout */
 }
 .sidebar .avatar {
   width: 150px;
@@ -47,6 +48,7 @@ body {
 }
 .sidebar .name .dot {
   color: var(--accent);
+  /* Hero: This section styles the hero area of the page */
 }
 .sidebar .role,
 .sidebar .contact {
@@ -56,6 +58,7 @@ body {
 }
 .sidebar .contact a {
   color: var(--accent);
+  /* Sections: spacing for page sections */
   text-decoration: none;
 }
 .sidebar .social {
@@ -90,13 +93,11 @@ body {
   color: #888;
 }
 
-/* Main */
 .main {
   overflow-y: auto;
   padding: 2rem;
 }
 
-/* Hero */
 .hero {
   position: relative;
   padding-bottom: 3rem;
@@ -132,7 +133,6 @@ body {
   color: var(--accent);
 }
 
-/* Sections */
 section {
   margin-bottom: 3rem;
 }
@@ -142,7 +142,6 @@ section h3 {
   margin-bottom: 1.5rem;
 }
 
-/* Achievements Carousel */
 .achievements .carousel {
   display: flex;
   overflow-x: auto;
@@ -167,7 +166,6 @@ section h3 {
   margin-bottom: 0.5rem;
 }
 
-/* Projects Grid */
 .projects .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -198,7 +196,6 @@ section h3 {
   opacity: 0.85;
 }
 
-/* Services Grid */
 .services .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -231,7 +228,6 @@ section h3 {
   color: #aaa;
 }
 
-/* Sidebar Navigation */
 .site-nav {
   display: flex;
   flex-direction: column;
@@ -254,7 +250,6 @@ section h3 {
   margin-right: 0.75rem;
 }
 
-/* Appointment Form */
 .appointment-form {
   display: grid;
   gap: 1rem;
@@ -272,4 +267,56 @@ section h3 {
   border: none;
   background: #2a2a2a;
   color: var(--text);
+}
+/* ===== Laptop-safe layout & anti-clipping overrides ===== */
+html, body {
+  height: auto !important;
+  min-height: 100% !important;
+  overflow-x: hidden !important; /* allow vertical scroll */
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 320px 1fr; /* sidebar + content */
+  gap: 2rem;
+}
+
+/* If your sidebar was fixed or 100vh, that causes clipping on laptops */
+.sidebar {
+  position: sticky;
+  top: 0;
+  align-self: start;
+}
+
+.content {
+  height: auto !important;
+  min-height: 100vh !important;
+  overflow: visible !important;
+}
+
+.section {
+  margin: 0 0 2.5rem 0;
+  padding-bottom: 2rem;
+}
+
+/* If there is a fixed footer, keep space for it */
+main { padding-bottom: 80px; }
+
+/* Stack layout on narrower screens/laptops to avoid clipping */
+@media (max-width: 1200px) {
+  .layout {
+    grid-template-columns: 1fr !important; /* stack */
+  }
+  .sidebar {
+    position: static !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+}
+
+/* Neutralize any earlier fixed heights/hidden overflow on wrappers */
+main, .main, .page, .container, .page-content {
+  height: auto !important;
+  min-height: 100vh !important;
+  overflow: visible !important;
 }
