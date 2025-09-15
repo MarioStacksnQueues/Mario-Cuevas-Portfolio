@@ -25,7 +25,6 @@ body {
   /* I set theme variables here so colors are easy to change */
   display: grid;
   grid-template-columns: 300px 1fr;
-  height: 100%;
 }
 
 .sidebar {
@@ -319,4 +318,80 @@ main, .main, .page, .container, .page-content {
   height: auto !important;
   min-height: 100vh !important;
   overflow: visible !important;
+}
+/* === Mobile / Small screens === */
+@media (max-width: 768px) {
+  /* Stack sidebar above content */
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  /* Sidebar becomes a normal block (not sticky) */
+  .sidebar {
+    position: static;
+    width: 100%;
+    padding: 1.25rem 1rem;
+  }
+
+  /* Content padding tighter on phones */
+  .main {
+    padding: 1.25rem 1rem;
+  }
+
+  /* Headings scale a bit down */
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+  section h3 {
+    font-size: 1.4rem;
+  }
+
+  /* Stats wrap into 2 columns */
+  .hero .stats {
+    flex-wrap: wrap;
+    gap: 1.25rem 1rem;
+  }
+  .hero .stats > div {
+    flex: 1 1 calc(50% - 1rem);
+  }
+  .hero .stats .count {
+    font-size: 2rem;
+  }
+
+  /* Project/service grids: single column */
+  .projects .grid,
+  .services .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Card spacing & tap targets a bit larger */
+  .project-card h4 { margin: 0.6rem 0.9rem 0.2rem; }
+  .project-card p  { margin: 0 0.9rem 0.9rem; font-size: 0.95rem; }
+
+  /* Navigation links easier to tap */
+  .site-nav a {
+    padding: 0.75rem 0.9rem;
+    font-size: 1rem;
+  }
+
+  /* Theme toggle not to overlap text */
+  .hero .mode-toggle {
+    top: 6px;
+    right: 6px;
+    font-size: 1.1rem;
+  }
+
+  /* Images always fit */
+  img,
+  .project-card img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Extra-small phones */
+@media (max-width: 380px) {
+  .hero h2 { font-size: 1.4rem; }
+  .hero .stats .count { font-size: 1.7rem; }
 }
