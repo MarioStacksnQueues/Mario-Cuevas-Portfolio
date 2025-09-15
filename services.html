@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projects — Mario Cuevas</title>
+  <title>My Services — Mario Cuevas</title>
 
   <!-- Google Font -->
   <link
@@ -22,7 +22,7 @@
 
   <!-- Font Awesome for icons -->
   <script
-    src="https://kit.fontawesome.com/your-real-kit-code.js"
+    src="https://kit.fontawesome.com/your-kit.js"
     crossorigin="anonymous"
   ></script>
 </head>
@@ -40,8 +40,8 @@
       <nav class="site-nav">
         <a href="index.html"><i class="fas fa-home"></i><span>Home</span></a>
         <a href="about.html"><i class="fas fa-user"></i><span>About Me</span></a>
-        <a href="services.html"><i class="fas fa-cogs"></i><span>My Services</span></a>
-        <a href="projects.html" class="active"><i class="fas fa-folder-open"></i><span>Projects</span></a>
+        <a href="services.html" class="active"><i class="fas fa-cogs"></i><span>My Services</span></a>
+        <a href="projects.html"><i class="fas fa-folder-open"></i><span>Projects</span></a>
         <a href="appointment.html"><i class="fas fa-calendar-alt"></i><span>Calendar</span></a>
       </nav>
 
@@ -62,33 +62,24 @@
 
     <!-- MAIN CONTENT -->
     <main class="main">
-      <section class="projects" data-aos="fade-up">
-        <h3>Featured Projects</h3>
-        <div class="grid">
-          <!-- Project 1 -->
-          <a href="#" class="project-card" data-aos="zoom-in">
-            <img src="proj-automeit.jpg" alt="Automeit.ai Platform"/>
-            <h4>Automeit.ai Platform</h4>
-            <p>LangChain agents & orchestration dashboard for automated workflows.</p>
-          </a>
-          <!-- Project 2 -->
-          <a href="#" class="project-card" data-aos="zoom-in" data-aos-delay="100">
-            <img src="proj-vizdata.jpg" alt="VizData Dashboard"/>
-            <h4>VizData Dashboard</h4>
-            <p>Interactive analytics dashboard built with React & D3.js.</p>
-          </a>
-          <!-- Project 3 -->
-          <a href="#" class="project-card" data-aos="zoom-in" data-aos-delay="200">
-            <img src="proj-mlmodel.jpg" alt="Churn Predictor"/>
-            <h4>Churn Predictor</h4>
-            <p>Machine learning model in Python achieving 88% prediction accuracy.</p>
-          </a>
-          <!-- Project 4 -->
-          <a href="#" class="project-card" data-aos="zoom-in" data-aos-delay="300">
-            <img src="proj-etlpipeline.jpg" alt="ETL Pipeline"/>
-            <h4>Scalable ETL Pipeline</h4>
-            <p>Data ingestion & transformation pipeline using Kafka & Spark.</p>
-          </a>
+      <section data-aos="fade-up">
+        <h3>My Services</h3>
+        <div class="grid services-grid">
+          <div class="service-card" data-aos="fade-right">
+            <i class="fas fa-code fa-2x"></i>
+            <h4>Front-End Development</h4>
+            <p>React, Tailwind CSS, Framer Motion, and Webflow to craft pixel-perfect UIs.</p>
+          </div>
+          <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-server fa-2x"></i>
+            <h4>Back-End & AI Pipelines</h4>
+            <p>Python, FastAPI, Docker, and AWS to build scalable microservices and AI workflows.</p>
+          </div>
+          <div class="service-card" data-aos="fade-left" data-aos-delay="200">
+            <i class="fas fa-chart-line fa-2x"></i>
+            <h4>Data Engineering</h4>
+            <p>Design ETL pipelines with Kafka, Spark, PostgreSQL, and MongoDB for real-time analytics.</p>
+          </div>
         </div>
       </section>
     </main>        <!-- closes .main -->
