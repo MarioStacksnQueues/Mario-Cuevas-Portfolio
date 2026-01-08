@@ -5,19 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Schedule Appointment — Mario Cuevas</title>
 
-  <!-- I load my preferred font here -->
   <link
     href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap"
     rel="stylesheet"
   />
 
-  <!-- AOS for animating elements as they scroll into view -->
   <link
     rel="stylesheet"
     href="https://unpkg.com/aos@2.3.4/dist/aos.css"
   />
 
-  <!-- Main CSS: controls layout and form styles -->
   <link rel="stylesheet" href="style.css"/>
 
   <script
@@ -27,7 +24,6 @@
 </head>
 <body>
   <div class="layout">
-  <!-- Sidebar is shared across pages; contains nav and resume link -->
   <aside class="sidebar">
       <img src="mario-avatar.jpg" alt="Mario Cuevas" class="avatar"/>
       <h1 class="name">
@@ -35,58 +31,64 @@
       </h1>
       <p class="role">Computer Science Student & AI Engineer</p>
 
-  <!-- Navigation links to other pages and site sections -->
   <nav class="site-nav">
         <a href="index.html"><i class="fas fa-home"></i><span>Home</span></a>
-        <a href="about.html"><i class="fas fa-user"></i><span>About Me</span></a>
-        <a href="services.html"><i class="fas fa-cogs"></i><span>My Services</span></a>
-        <a href="projects.html"><i class="fas fa-folder-open"></i><span>Projects</span></a>
+        <a href="index.html#about"><i class="fas fa-user"></i><span>About Me</span></a>
+        <a href="index.html#services"><i class="fas fa-cogs"></i><span>My Services</span></a>
+        <a href="index.html#projects"><i class="fas fa-folder-open"></i><span>Projects</span></a>
         <a href="appointment.html" class="active"><i class="fas fa-calendar-alt"></i><span>Calendar</span></a>
       </nav>
 
       <div class="social">
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/MarioStacksnQueues" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/mario-cuevas-b26421232" target="_blank"><i class="fab fa-linkedin"></i></a>
       </div>
 
-      <!-- Quick resume download for visitors -->
-      <a href="Resume_Mario_Cuevas.pdf" class="btn hire" download>
+      <a href="Cuevas_Mario_Resume.pdf" class="btn hire" download>
         DOWNLOAD RESUME
       </a>
 
       <p class="copyright">© 2025 Mario Cuevas</p>
     </aside>
 
-    <!-- Main: page-specific content below -->
     <main class="main">
-      <!-- Appointment form: collects date, time, and email for booking -->
+      <!-- Appointment form: sends to Mario's email via Formspree -->
       <section>
         <h3>Schedule an Appointment</h3>
-        <form class="appointment-form">
+        <form class="appointment-form" action="https://formspree.io/f/xnjneyrq" method="POST">
+          <!-- Hidden field to set email subject -->
+          <input type="hidden" name="_subject" value="New Appointment Request from Portfolio"/>
+          
           <label>
-            Pick a Date
-            <input type="date" name="date" required/>
-          </label>
-          <label>
-            Pick a Time
-            <input type="time" name="time" required/>
+            Your Name
+            <input type="text" name="name" placeholder="John Doe" required/>
           </label>
           <label>
             Your Email
             <input type="email" name="email" placeholder="you@example.com" required/>
           </label>
+          <label>
+            Preferred Date
+            <input type="date" name="date" required/>
+          </label>
+          <label>
+            Preferred Time
+            <input type="time" name="time" required/>
+          </label>
+          <label>
+            Message (Optional)
+            <textarea name="message" rows="3" placeholder="What would you like to discuss?"></textarea>
+          </label>
           <button type="submit" class="btn hire">Book Now</button>
         </form>
         <p class="note">
-          After booking, you’ll receive a confirmation email with a calendar invitation.
+          After submitting, I'll receive your request and follow up to confirm the appointment.
         </p>
       </section>
     </main>
   </div>
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.8/countUp.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

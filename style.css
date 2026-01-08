@@ -167,7 +167,7 @@ section h3 {
 
 .projects .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
 }
 .project-card {
@@ -193,6 +193,17 @@ section h3 {
   margin: 0 1rem 1rem;
   font-size: 0.9rem;
   opacity: 0.85;
+}
+.project-card .pill {
+  display: inline-block;
+  margin: 0 1rem 1rem;
+  padding: 0.35rem 0.75rem;
+  background: rgba(0, 230, 118, 0.15);
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  color: var(--accent);
+  font-weight: 500;
 }
 
 .services .grid {
