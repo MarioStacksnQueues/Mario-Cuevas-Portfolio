@@ -21,10 +21,11 @@
   <link rel="stylesheet" href="style.css"/>
 
   <!-- I include Font Awesome for the icons used in the nav and cards -->
-  <script
-    src="https://kit.fontawesome.com/your-kit.js"
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     crossorigin="anonymous"
-  ></script>
+  />
 
 <!-- add this just before </head> -->
 <script src="script.js" defer></script>
@@ -53,16 +54,15 @@
       
   <!-- Social links: GitHub and LinkedIn (open in new tab) -->
   <div class="social">
-      <a href="Cuevas_Mario_Resume.pdf" class="btn hire" download>
+      <a href="FINISHED_RESUME_MARIO_CUEVAS.pdf" class="btn hire" download>
           DOWNLOAD RESUME
         </a>
-        <a href="https://github.com/MarioStacksnQueues" class="btn hire" download>
+        <a href="https://github.com/MarioStacksnQueues" class="btn hire" target="_blank" rel="noopener noreferrer">
         Check out my GitHub!
       </a>
-        <a href="https://www.linkedin.com/in/mario-cuevas-b26421232"  class="btn hire" download>
+        <a href="https://www.linkedin.com/in/mario-cuevas-b26421232" class="btn hire" target="_blank" rel="noopener noreferrer">
         Connect on LinkedIn!
       </a>
-        </a>
       </div>
      
       <p class="copyright">© 2025 Mario Cuevas</p>
@@ -110,10 +110,10 @@
   </p>
 
   <ul class="about-highlights">
-    <li>🏗️ <strong>Founder & AI Engineer, Automeit.ai</strong> — orchestrated LangChain agents on Docker; processed <strong>5,000+ tasks/mo</strong>, doubled throughput in 2 months, and cut server costs <strong>20%</strong> while improving retention <strong>12%</strong>.</li>
-    <li>🤖 <strong>Software Engineering Intern, Vedi Robotics</strong> — shipped a Flask microservice for a trained NLP model; <strong>35%</strong> lower latency; CI/CD with GitHub Actions + Docker cut release effort <strong>75%</strong>.</li>
-    <li>📊 <strong>Data Science Intern, Be.Brooklyn</strong> — built an ETL pipeline (Python) that reduced processing time <strong>40%</strong>; churn-risk model hit <strong>88% accuracy</strong>, lifting retention by <strong>12%</strong>.</li>
-    <li>⚾ <strong>Student-Athlete (D1/D2)</strong> — Baseball at Coppin State & Clark Atlanta; leadership, discipline, and time-management under pressure.</li>
+    <li> <strong>Founder & AI Engineer, Automeit.ai</strong> — orchestrated LangChain agents on Docker; processed <strong>5,000+ tasks/mo</strong>, doubled throughput in 2 months, and cut server costs <strong>20%</strong> while improving retention <strong>12%</strong>.</li>
+    <li> <strong>Software Engineering Intern, Vedi Robotics</strong> — shipped a Flask microservice for a trained NLP model; <strong>35%</strong> lower latency; CI/CD with GitHub Actions + Docker cut release effort <strong>75%</strong>.</li>
+    <li> <strong>Data Science Intern, Be.Brooklyn</strong> — built an ETL pipeline (Python) that reduced processing time <strong>40%</strong>; churn-risk model hit <strong>88% accuracy</strong>, lifting retention by <strong>12%</strong>.</li>
+    <li> <strong>Student-Athlete (D1/D2)</strong> — Baseball at Coppin State & Clark Atlanta; leadership, discipline, and time-management under pressure.</li>
   </ul>
 
   <p class="about-skills">
@@ -152,7 +152,6 @@
 </section>
 
   <!-- Projects: featured project cards linking to demos or repos -->
-<!-- Projects: featured project cards linking to demos or repos -->
 <section id="projects" class="projects" data-aos="fade-up">
   <h3>Featured Projects</h3>
   <div class="grid">
@@ -168,7 +167,40 @@
       <span class="pill">Python • FastAPI • Docker • LangChain</span>
     </a>
 
-    <a href="#" class="project-card" data-aos="zoom-in" data-aos-delay="100">
+    <a href="https://github.com/MarioStacksnQueues" target="_blank" class="project-card" data-aos="zoom-in" data-aos-delay="100">
+      <img src="proj-trashbot.jpg" alt="TrashBot — Autonomous Garbage Collection Robot"/>
+      <h4>TrashBot — Autonomous Robot</h4>
+      <p>
+        Built an end-to-end autonomous garbage collection robot using ROS Noetic and PyTorch CNN 
+        for real-time object detection. Implemented visual servoing navigation, state machine 
+        coordination, and 3-DOF arm control in Gazebo simulation.
+      </p>
+      <span class="pill">ROS Noetic • PyTorch • Gazebo • OpenCV</span>
+    </a>
+
+    <a href="https://github.com/MarioStacksnQueues" target="_blank" class="project-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="proj-secuscript.jpg" alt="SecuScript DSL Compiler"/>
+      <h4>SecuScript — DSL Compiler</h4>
+      <p>
+        Designed a domain-specific language compiler for security and network operations. 
+        Built complete compilation pipeline including lexical analysis, recursive descent parsing, 
+        AST generation, and Python code synthesis for network scanning and monitoring.
+      </p>
+      <span class="pill">Python • Compiler Design • AST • Security</span>
+    </a>
+
+    <a href="https://github.com/MarioStacksnQueues/US-Collisions-2016-2023-Forecasting-Collision-Trends" target="_blank" class="project-card" data-aos="zoom-in" data-aos-delay="300">
+      <img src="proj-collisions.jpg" alt="US Collisions Forecasting"/>
+      <h4>US Collisions — ML Forecasting</h4>
+      <p>
+        Analyzed 7+ years of US traffic collision data to build predictive models 
+        for forecasting collision trends. Applied time series analysis, feature engineering, 
+        and machine learning algorithms to identify patterns and risk factors.
+      </p>
+      <span class="pill">Python • scikit-learn • Pandas • Data Science</span>
+    </a>
+
+    <a href="#" class="project-card" data-aos="zoom-in" data-aos-delay="400">
       <img src="proj-vrob-nlp.jpg" alt="Vedi Robotics — NLP Microservice"/>
       <h4>Vedi Robotics — NLP Microservice</h4>
       <p>
@@ -179,7 +211,7 @@
       <span class="pill">Flask • TensorFlow • GitHub Actions • AWS</span>
     </a>
 
-    <a href="#" class="project-card" data-aos="zoom-in" data-aos-delay="200">
+    <a href="#" class="project-card" data-aos="zoom-in" data-aos-delay="500">
       <img src="proj-bebrooklyn.jpg" alt="Be.Brooklyn — Churn Model"/>
       <h4>Be.Brooklyn — Churn Model</h4>
       <p>
@@ -195,26 +227,36 @@
 
 
 
-  <!-- Calendar/Appointment: simple booking form that emails confirmation -->
+  <!-- Calendar/Appointment: booking form that sends to Mario's email -->
   <section id="calendar" data-aos="fade-up">
         <h3>Schedule an Appointment</h3>
-        <form class="appointment-form">
+        <form class="appointment-form" action="https://formspree.io/f/xnjneyrq" method="POST">
+          <input type="hidden" name="_subject" value="New Appointment Request from Portfolio"/>
+          
           <label>
-            Pick a Date
-            <input type="date" name="date" required/>
-          </label>
-          <label>
-            Pick a Time
-            <input type="time" name="time" required/>
+            Your Name
+            <input type="text" name="name" placeholder="John Doe" required/>
           </label>
           <label>
             Your Email
             <input type="email" name="email" placeholder="you@example.com" required/>
           </label>
+          <label>
+            Preferred Date
+            <input type="date" name="date" required/>
+          </label>
+          <label>
+            Preferred Time
+            <input type="time" name="time" required/>
+          </label>
+          <label>
+            Message (Optional)
+            <textarea name="message" rows="3" placeholder="What would you like to discuss?"></textarea>
+          </label>
           <button type="submit" class="btn hire">Book Now</button>
         </form>
         <p class="note">
-          After booking, you’ll receive a confirmation email with a calendar invitation.
+          After submitting, I'll receive your request and follow up to confirm.
         </p>
       </section>
     </main>
