@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home — Mario Cuevas</title>
+
+  <!-- I load the Google font I use site-wide -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- I use AOS for scroll animations on elements -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+  />
+
+  <!-- My main stylesheet: styles for layout, sidebar, and components -->
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- I include Font Awesome for the icons used in the nav and cards -->
+  <script
+    src="https://kit.fontawesome.com/your-kit.js"
+    crossorigin="anonymous"
+  ></script>
+
+<!-- add this just before </head> -->
+<script src="script.js" defer></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+
+</head>
+<body>
+  <div class="layout">
+    <!-- Sidebar: my photo, primary nav, socials, and resume download -->
+    <aside class="sidebar">
+      <h1 class="name">
+        Mario Cuevas<span class="dot">.</span>
+      </h1>
+       <img src="mario-avatar.jpg" alt="Mario Cuevas" class="avatar"/>
+      <p class="role">Computer Science Student & AI Engineer</p>
+
+  <!-- Primary navigation: anchors to sections and calendar page -->
+  <nav class="site-nav">
+        <a href="#hero"><i class="fas fa-home"></i><span>Home</span></a>
+        <a href="#about"><i class="fas fa-user"></i><span>About Me</span></a>
+        <a href="#services"><i class="fas fa-cogs"></i><span>My Services</span></a>
+        <a href="#projects"><i class="fas fa-folder-open"></i><span>Projects</span></a>
+        <a href="appointment.html"><i class="fas fa-calendar-alt"></i><span>Calendar</span></a>
+      </nav>
+      
+      
+  <!-- Social links: GitHub and LinkedIn (open in new tab) -->
+  <div class="social">
+      <a href="FINISHED_RESUME_MARIO_CUEVAS.pdf" class="btn hire" download>
+          DOWNLOAD RESUME
+        </a>
+        <a href="https://github.com/MarioStacksnQueues" class="btn hire" download>
+        Check out my GitHub!
+      </a>
+        <a href="https://www.linkedin.com/in/mario-cuevas-b26421232"  class="btn hire" download>
+        Connect on LinkedIn!
+      </a>
+        </a>
+      </div>
+     
+      <p class="copyright">© 2025 Mario Cuevas</p>
+    </aside>
+
+    <!-- Main content: hero, about, services, projects, calendar -->
+    <main class="main">
+      <!-- Hero: intro, quick stats, and theme toggle -->
+      <section class="hero" id="hero">
+        <button class="mode-toggle"><i class="fas fa-moon"></i></button>
+        <h2 data-aos="fade-right">
+          Hi, I’m <span class="accent">Mario Cuevas</span><br/>
+          CS Student & AI Engineer
+        </h2>
+        <p data-aos="fade-up">
+          Architect of scalable AI pipelines in Python & FastAPI.<br/>
+          Cut server costs by 20% and boosted customer retention by 12%.
+        </p>
+        <div class="stats" data-aos="fade-up" data-aos-delay="200">
+          <div>
+            <span class="count" data-target="5000">5000</span>+<br/>
+            Tasks Processed / mo
+          </div>
+          <div>
+            <span class="count" data-target="3">3</span> Pilot Clients<br/>
+            (30 hrs saved/wk)
+          </div>
+          <div>
+            <span class="count" data-target="20">20</span>%<br/>
+            Server Cost Reduction
+          </div>
+          <div>
+            <span class="count" data-target="12">12</span>%<br/>
+            Retention Increase
+          </div>
+        </div>
+      </section>
+  <!-- About: short bio and background highlights -->
+<section id="about" data-aos="fade-up">
+  <h3>About Me</h3>
+  <p>
+    I’m <strong>Mario Cuevas</strong>, a junior Computer Science student at Clark Atlanta University (B.S. expected May 2026).
+    I build scalable AI systems with Python, FastAPI, and Docker—reducing server costs, speeding up inference, and
+    driving measurable product wins.
+  </p>
+
+  <ul class="about-highlights">
+    <li> <strong>Founder & AI Engineer, Automeit.ai</strong> — orchestrated LangChain agents on Docker; processed <strong>5,000+ tasks/mo</strong>, doubled throughput in 2 months, and cut server costs <strong>20%</strong> while improving retention <strong>12%</strong>.</li>
+    <li> <strong>Software Engineering Intern, Vedi Robotics</strong> — shipped a Flask microservice for a trained NLP model; <strong>35%</strong> lower latency; CI/CD with GitHub Actions + Docker cut release effort <strong>75%</strong>.</li>
+    <li> <strong>Data Science Intern, Be.Brooklyn</strong> — built an ETL pipeline (Python) that reduced processing time <strong>40%</strong>; churn-risk model hit <strong>88% accuracy</strong>, lifting retention by <strong>12%</strong>.</li>
+    <li> <strong>Student-Athlete (D1/D2)</strong> — Baseball at Coppin State & Clark Atlanta; leadership, discipline, and time-management under pressure.</li>
+  </ul>
+
+  <p class="about-skills">
+    <strong>Stack:</strong> Python, FastAPI, Docker, Kubernetes, AWS (SageMaker, Lambda), LangChain & prompt engineering, SQL (PostgreSQL/MySQL), MongoDB, Spark/Kafka, CI/CD (GitHub Actions), Data Structures & Algorithms.
+  </p>
+</section>
+
+  <!-- Services: cards describing my core offerings -->
+<section id="services" data-aos="fade-up">
+  <h3>My Services</h3>
+  <div class="grid services-grid">
+    <div class="service-card" data-aos="fade-right">
+      <i class="fas fa-robot fa-2x"></i>
+      <h4>AI/ML Engineering</h4>
+      <p>Design and deploy ML/NLP services with measurable impact—e.g., -35% latency and +12% retention via practical model + product tuning.</p>
+    </div>
+
+    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+      <i class="fas fa-server fa-2x"></i>
+      <h4>Back-End & MLOps</h4>
+      <p>FastAPI microservices, containerized with Docker, CI/CD via GitHub Actions, and AWS (SageMaker/Lambda) for reliable, repeatable releases.</p>
+    </div>
+
+    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+      <i class="fas fa-sitemap fa-2x"></i>
+      <h4>Automation & AI Agents</h4>
+      <p>LangChain agent orchestration (Automeit.ai) that processes 5k+ tasks/month and saves pilot clients ~30 hours/week.</p>
+    </div>
+
+    <div class="service-card" data-aos="fade-left" data-aos-delay="300">
+      <i class="fas fa-database fa-2x"></i>
+      <h4>Data Engineering & Analytics</h4>
+      <p>ETL with Python/Spark/Kafka; production metrics pipelines; churn models (up to 88% accuracy) that inform real business decisions.</p>
+    </div>
+  </div>
+</section>
+
+  <!-- Projects: featured project cards linking to demos or repos -->
+<section id="projects" class="projects" data-aos="fade-up">
+  <h3>Featured Projects</h3>
+  <div class="grid">
+
+    <a href="#" class="project-card" data-aos="zoom-in">
+      <img src="proj-automeit.jpg" alt="Automeit.ai — AI Agent Orchestration"/>
+      <h4>Automeit.ai — Agent Orchestration</h4>
+      <p>
+        Architected a lightweight, Docker-based orchestration system for LangChain agents,
+        processing 5k+ tasks per month and securing 3 pilot clients. 
+        Reduced infra costs by 20% and boosted client retention by 12%.
+      </p>
+      <span class="pill">Python • FastAPI • Docker • LangChain</span>
+    </a>
+
+    <a href="https://github.com/MarioStacksnQueues" target="_blank" class="project-card" data-aos="zoom-in" data-aos-delay="100">
+      <img src="proj-trashbot.jpg" alt="TrashBot — Autonomous Garbage Collection Robot"/>
+      <h4>TrashBot — Autonomous Robot</h4>
+      <p>
+        Built an end-to-end autonomous garbage collection robot using ROS Noetic and PyTorch CNN 
+        for real-time object detection. Implemented visual servoing navigation, state machine 
+        coordination, and 3-DOF arm control in Gazebo simulation.
+      </p>
+      <span class="pill">ROS Noetic • PyTorch • Gazebo • OpenCV</span>
+    </a>
+
+    <a href="https://github.com/MarioStacksnQueues" target="_blank" class="project-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="proj-secuscript.jpg" alt="SecuScript DSL Compiler"/>
+      <h4>SecuScript — DSL Compiler</h4>
+      <p>
+        Designed a domain-specific language compiler for security and network operations. 
+        Built complete compilation pipeline including lexical analysis, recursive descent parsing, 
+        AST generation, and Python code synthesis for network scanning and monitoring.
+      </p>
+      <span class="pill">Python • Compiler Design • AST • Security</span>
+    </a>
+
+    <a href="https://github.com/MarioStacksnQueues/US-Collisions-2016-2023-Forecasting-Collision-Trends" target="_blank" class="project-card" data-aos="zoom-in" data-aos-delay="300">
+      <img src="proj-collisions.jpg" alt="US Collisions Forecasting"/>
+      <h4>US Collisions — ML Forecasting</h4>
+      <p>
+        Analyzed 7+ years of US traffic collision data to build predictive models 
+        for forecasting collision trends. Applied time series analysis, feature engineering, 
+        and machine learning algorithms to identify patterns and risk factors.
+      </p>
+      <span class="pill">Python • scikit-learn • Pandas • Data Science</span>
+    </a>
+
+    <a href="#" class="project-card" data-aos="zoom-in" data-aos-delay="400">
+      <img src="proj-vrob-nlp.jpg" alt="Vedi Robotics — NLP Microservice"/>
+      <h4>Vedi Robotics — NLP Microservice</h4>
+      <p>
+        Developed a Flask microservice for a trained NLP model served via REST API,
+        cutting inference latency by 35%. Added GitHub Actions CI/CD with Docker for TensorFlow,
+        reducing manual release effort by 75% and enabling reproducible builds.
+      </p>
+      <span class="pill">Flask • TensorFlow • GitHub Actions • AWS</span>
+    </a>
+
+    <a href="#" class="project-card" data-aos="zoom-in" data-aos-delay="500">
+      <img src="proj-bebrooklyn.jpg" alt="Be.Brooklyn — Churn Model"/>
+      <h4>Be.Brooklyn — Churn Model</h4>
+      <p>
+        Engineered a predictive churn-risk model with scikit-learn and XGBoost
+        that achieved 88% accuracy. Supported marketing campaigns that lifted retention by 12%.
+        Also built an ETL pipeline that reduced data processing time by 40% and enabled daily dashboards.
+      </p>
+      <span class="pill">Python • XGBoost • ETL • Dashboards</span>
+    </a>
+
+  </div>
+</section>
+
+
+
+  <!-- Calendar/Appointment: booking form that sends to Mario's email -->
+  <section id="calendar" data-aos="fade-up">
+        <h3>Schedule an Appointment</h3>
+        <form class="appointment-form" action="https://formspree.io/f/xnjneyrq" method="POST">
+          <input type="hidden" name="_subject" value="New Appointment Request from Portfolio"/>
+          
+          <label>
+            Your Name
+            <input type="text" name="name" placeholder="John Doe" required/>
+          </label>
+          <label>
+            Your Email
+            <input type="email" name="email" placeholder="you@example.com" required/>
+          </label>
+          <label>
+            Preferred Date
+            <input type="date" name="date" required/>
+          </label>
+          <label>
+            Preferred Time
+            <input type="time" name="time" required/>
+          </label>
+          <label>
+            Message (Optional)
+            <textarea name="message" rows="3" placeholder="What would you like to discuss?"></textarea>
+          </label>
+          <button type="submit" class="btn hire">Book Now</button>
+        </form>
+        <p class="note">
+          After submitting, I'll receive your request and follow up to confirm.
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <!-- Scripts: AOS for animations, CountUp for stat counters, and site JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.8/countUp.min.js"></script>
+  <script src="script.js"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</body>
+</html>

@@ -1,0 +1,418 @@
+
+:root {
+  --bg: #121212;
+  --surface: #1e1e1e;
+  --text: #e0e0e0;
+  --accent: #00e676;
+  --font: 'Roboto', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+}
+
+.layout {
+  /* I set theme variables here so colors are easy to change */
+  display: grid;
+  grid-template-columns: 300px 1fr;
+}
+
+.sidebar {
+  background: var(--surface);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* Sidebar: This section styles the sidebar of the layout */
+}
+.sidebar .avatar {
+  width: 150px;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+.sidebar .name {
+  font-size: 1.75rem;
+  margin-bottom: 0.25rem;
+}
+.sidebar .name .dot {
+  color: var(--accent);
+  /* Hero: This section styles the hero area of the page */
+}
+.sidebar .role,
+.sidebar .contact {
+  margin-bottom: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.sidebar .contact a {
+  color: var(--accent);
+  /* Sections: spacing for page sections */
+  text-decoration: none;
+}
+.sidebar .social {
+  margin: 1rem 0;
+}
+.sidebar .social a {
+  color: var(--text);
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  transition: color 0.2s;
+}
+.sidebar .social a:hover {
+  color: var(--accent);
+}
+.sidebar .btn.hire {
+  display: block;
+  margin: 1.5rem 0;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent);
+  color: #000;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.2s;
+}
+.sidebar .btn.hire:hover {
+  transform: translateY(-2px);
+}
+.sidebar .copyright {
+  margin-top: auto;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.main {
+  overflow-y: auto;
+  padding: 2rem;
+}
+
+.hero {
+  position: relative;
+  padding-bottom: 3rem;
+}
+.hero .mode-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.hero h2 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.hero .accent {
+  color: var(--accent);
+}
+.hero p {
+  margin-bottom: 2rem;
+  opacity: 0.8;
+}
+.hero .stats {
+  display: flex;
+  gap: 3rem;
+}
+.hero .stats .count {
+  font-size: 2.5rem;
+  color: var(--accent);
+}
+
+section {
+  margin-bottom: 3rem;
+}
+section h3 {
+  font-size: 1.75rem;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.achievements .carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem 0;
+  scroll-snap-type: x mandatory;
+}
+.achievements .card {
+  flex: 0 0 200px;
+  background: var(--surface);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  scroll-snap-align: start;
+  transition: transform 0.3s;
+}
+.achievements .card:hover {
+  transform: translateY(-8px);
+}
+.achievements .card i {
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.projects .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.project-card {
+  background: var(--surface);
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--text);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+}
+.project-card img {
+  width: 100%;
+  display: block;
+}
+.project-card h4 {
+  margin: 0.75rem 1rem 0.25rem;
+}
+.project-card p {
+  margin: 0 1rem 1rem;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+.project-card .pill {
+  display: inline-block;
+  margin: 0 1rem 1rem;
+  padding: 0.35rem 0.75rem;
+  background: rgba(0, 230, 118, 0.15);
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.services .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 600px) {
+  .services .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.service-card {
+  background: var(--surface);
+  border: 2px solid #333;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color 0.2s;
+}
+.service-card:hover {
+  border-color: var(--accent);
+}
+.service-card h4 {
+  margin-bottom: 0.5rem;
+}
+.service-card .meta {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.site-nav {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 0;
+}
+.site-nav a {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  color: var(--text);
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.site-nav a:hover,
+.site-nav a.active {
+  background: #2a2a2a;
+  border-radius: 6px;
+}
+.site-nav a i {
+  margin-right: 0.75rem;
+}
+
+.appointment-form {
+  display: grid;
+  gap: 1rem;
+  max-width: 400px;
+}
+.appointment-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+.appointment-form input {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: none;
+  background: #2a2a2a;
+  color: var(--text);
+}
+.appointment-form textarea {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: none;
+  background: #2a2a2a;
+  color: var(--text);
+  font-family: inherit;
+  resize: vertical;
+}
+/* ===== Laptop-safe layout & anti-clipping overrides ===== */
+html, body {
+  height: auto !important;
+  min-height: 100% !important;
+  overflow-x: hidden !important; /* allow vertical scroll */
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 320px 1fr; /* sidebar + content */
+  gap: 2rem;
+}
+
+/* If your sidebar was fixed or 100vh, that causes clipping on laptops */
+.sidebar {
+  position: sticky;
+  top: 0;
+  align-self: start;
+}
+
+.content {
+  height: auto !important;
+  min-height: 100vh !important;
+  overflow: visible !important;
+}
+
+.section {
+  margin: 0 0 2.5rem 0;
+  padding-bottom: 2rem;
+}
+
+/* If there is a fixed footer, keep space for it */
+main { padding-bottom: 80px; }
+
+/* Stack layout on narrower screens/laptops to avoid clipping */
+@media (max-width: 1200px) {
+  .layout {
+    grid-template-columns: 1fr !important; /* stack */
+  }
+  .sidebar {
+    position: static !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+}
+
+/* Neutralize any earlier fixed heights/hidden overflow on wrappers */
+main, .main, .page, .container, .page-content {
+  height: auto !important;
+  min-height: 100vh !important;
+  overflow: visible !important;
+}
+/* === Mobile / Small screens === */
+@media (max-width: 768px) {
+  /* Stack sidebar above content */
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  /* Sidebar becomes a normal block (not sticky) */
+  .sidebar {
+    position: static;
+    width: 100%;
+    padding: 1.25rem 1rem;
+  }
+
+  /* Content padding tighter on phones */
+  .main {
+    padding: 1.25rem 1rem;
+  }
+
+  /* Headings scale a bit down */
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+  section h3 {
+    font-size: 1.4rem;
+  }
+
+  /* Stats wrap into 2 columns */
+  .hero .stats {
+    flex-wrap: wrap;
+    gap: 1.25rem 1rem;
+  }
+  .hero .stats > div {
+    flex: 1 1 calc(50% - 1rem);
+  }
+  .hero .stats .count {
+    font-size: 2rem;
+  }
+
+  /* Project/service grids: single column */
+  .projects .grid,
+  .services .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Card spacing & tap targets a bit larger */
+  .project-card h4 { margin: 0.6rem 0.9rem 0.2rem; }
+  .project-card p  { margin: 0 0.9rem 0.9rem; font-size: 0.95rem; }
+
+  /* Navigation links easier to tap */
+  .site-nav a {
+    padding: 0.75rem 0.9rem;
+    font-size: 1rem;
+  }
+
+  /* Theme toggle not to overlap text */
+  .hero .mode-toggle {
+    top: 6px;
+    right: 6px;
+    font-size: 1.1rem;
+  }
+
+  /* Images always fit */
+  img,
+  .project-card img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Extra-small phones */
+@media (max-width: 380px) {
+  .hero h2 { font-size: 1.4rem; }
+  .hero .stats .count { font-size: 1.7rem; }
+}
